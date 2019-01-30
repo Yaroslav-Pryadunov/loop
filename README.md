@@ -15,7 +15,8 @@ in the wild. Some demo samples can be [found here](https://ytaigman.github.io/lo
 ## Quick Start
 Follow the instructions in [Setup](#setup) and then simply execute:
  ```bash
- python generate.py  --npz data/vctk/numpy_features_valid/p318_212.npz --spkr 13 --checkpoint models/vctk/bestmodel.pth
+ python generate.py --spkr 10 --checkpoint models/vctk/bestmodel.pth --text "Hello, could you please say something?"
+ mplayer models/vctk/results/Hello_could_you_please_say_something.gen_10.wav
  ```
  Results will be placed in ```models/vctk/results```. It will generate 2 samples: 
   * The [generated sample](https://ytaigman.github.io/loop/demos/vctk_tutorial/p318_212.gen_10.wav) will be saved with the gen_10.wav extension.
