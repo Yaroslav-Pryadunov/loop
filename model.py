@@ -12,9 +12,9 @@ from torch.nn.utils.rnn import pack_padded_sequence as pack
 
 
 def getLinear(dim_in, dim_out):
-    return nn.Sequential(nn.Linear(dim_in, int(dim_in/10)),
+    return nn.Sequential(nn.Linear(dim_in, dim_in//10),
                          nn.ReLU(),
-                         nn.Linear(int(dim_in/10), dim_out))
+                         nn.Linear(dim_in//10, dim_out))
 
 
 class MaskedMSE(nn.Module):
@@ -88,7 +88,7 @@ class GravesAttention(nn.Module):
         self.J = Variable(torch.arange(0, 500)
                                .expand_as(torch.Tensor(batch_size,
                                           self.K,
-                                          500)),
+                                          500)).float(),
                           requires_grad=False)
 
     def forward(self, C, context, mu_tm1):
