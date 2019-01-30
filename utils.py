@@ -208,7 +208,7 @@ def generate_merlin_wav(
     fw_alpha = 0.58
     co_coef = 511
 
-    sptkdir = os.path.abspath(os.path.dirname(__file__) + "/tools/SPTK-3.9/") + '/'
+    sptkdir = os.path.abspath(os.path.dirname(__file__) + "/tools/bin/SPTK-3.9/") + '/'
     sptk_path = {
         'SOPR': sptkdir + 'sopr',
         'FREQT': sptkdir + 'freqt',
