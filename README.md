@@ -49,7 +49,7 @@ pip install -r scripts/requirements.txt
 ```
 
 ### Data
-The data used to train the models in the paper can be downloaded via:
+The data used to train & run the models or run pretrained models can be downloaded via:
 ```bash
 bash scripts/download_data.sh
 ```
@@ -74,7 +74,7 @@ loop
 The preprocess pipeline can be executed using the following script by Kyle Kastner: https://gist.github.com/kastnerkyle/cc0ac48d34860c5bb3f9112f4d9a0300.
 
 ### Pretrained Models
-Pretrainde models can be downloaded via:
+Pretrained models can be downloaded via:
 ```bash
 bash scripts/download_models.sh
 ```
