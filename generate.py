@@ -8,6 +8,8 @@ import os
 import argparse
 import numpy as np
 import phonemizer
+import phonemizer.separator as separator
+from phonemizer.phonemize import phonemize
 import string
 
 import torch
@@ -39,8 +41,8 @@ if args.gpu >= 0:
 
 
 def text2phone(text, char2code):
-    seperator = phonemizer.separator.Separator('', '', ' ')
-    ph = phonemizer.phonemize(text, separator=seperator)
+    seperator = separator.Separator('', '', ' ')
+    ph = phonemize(text, separator=seperator)
     ph = ph.split(' ')
     ph.remove('')
 
