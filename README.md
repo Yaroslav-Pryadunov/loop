@@ -40,13 +40,28 @@ python generate.py  --text "hello world" --spkr 1 --checkpoint models/vctk/bestm
 ```
 
 ## Setup
-Requirements: Linux/OSX, Python2.7 and [PyTorch 0.1.12](http://pytorch.org/). Generation requires installing [phonemizer](https://github.com/bootphon/phonemizer), follow the setup instructions there. 
+
+Requirements:
+
+* Linux/OSX
+* Python2.7
+* [PyTorch 0.1.12](http://pytorch.org/)
+
+```
+sudo apt-get install festival espeak
+```
+
 The current version of the code requires CUDA support for training. Generation can be done on the CPU.
 
 ```bash
 git clone https://github.com/facebookresearch/loop.git
 cd loop
+git submodule init
+git submodule update
 pip install -r scripts/requirements.txt
+cd phonemizer
+python setup.py build
+sudo python setup.py install
 ```
 
 ### Data
