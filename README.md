@@ -54,10 +54,8 @@ sudo apt-get install festival espeak
 The current version of the code requires CUDA support for training. Generation can be done on the CPU.
 
 ```bash
-git clone https://github.com/dmikushin/loop.git
+git clone --recursive https://github.com/dmikushin/loop.git
 cd loop
-git submodule init
-git submodule update
 sudo apt install python-pip python-wheel libpython2.7-dev unzip
 pip install -r scripts/requirements.txt
 cd ThirdParty/phonemizer

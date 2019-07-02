@@ -4,3 +4,6 @@
 [submodule "ThirdParty/phonemizer"]
 	path = ThirdParty/phonemizer
 	url = https://github.com/bootphon/phonemizer
+[submodule "ThirdParty/extract_feats"]
+	path = ThirdParty/extract_feats
+	url = https://github.com/dmikushin/extract_feats
