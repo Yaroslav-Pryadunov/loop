@@ -54,12 +54,13 @@ sudo apt-get install festival espeak
 The current version of the code requires CUDA support for training. Generation can be done on the CPU.
 
 ```bash
-git clone https://github.com/facebookresearch/loop.git
+git clone https://github.com/dmikushin/loop.git
 cd loop
 git submodule init
 git submodule update
+sudo apt install python-pip python-wheel libpython2.7-dev unzip
 pip install -r scripts/requirements.txt
-cd phonemizer
+cd ThirdParty/phonemizer
 python setup.py build
 sudo python setup.py install
 ```
@@ -72,7 +73,7 @@ bash scripts/download_data.sh
 
 The script downloads and preprocesses a subset of [VCTK](http://homepages.inf.ed.ac.uk/jyamagis/page3/page58/page58.html). This subset contains speakers with american accent.  
 
-The dataset was preprocessed using [Merlin](http://www.cstr.ed.ac.uk/projects/merlin/) - from each audio clip we extracted vocoder features using the [WORLD](http://ml.cs.yamanashi.ac.jp/world/english/) vocoder. After downloading, the dataset will be located under subfolder ```data``` as follows:
+The dataset was preprocessed using [Merlin](http://www.cstr.ed.ac.uk/projects/merlin/) - from each audio clip we extracted vocoder features using the [WORLD](https://github.com/mmorise/World) vocoder. After downloading, the dataset will be located under subfolder ```data``` as follows:
 
 ```
 loop

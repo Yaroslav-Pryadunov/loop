@@ -1,6 +1,6 @@
-[submodule "phonemizer"]
-	path = phonemizer
-	url = https://github.com/bootphon/phonemizer
 [submodule "ThirdParty/espeak"]
 	path = ThirdParty/espeak
 	url = https://github.com/dmikushin/espeak.git
+[submodule "ThirdParty/phonemizer"]
+	path = ThirdParty/phonemizer
+	url = https://github.com/bootphon/phonemizer
