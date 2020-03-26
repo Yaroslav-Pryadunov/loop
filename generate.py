@@ -42,9 +42,11 @@ if args.gpu >= 0:
 
 def text2phone(text, char2code):
     seperator = separator.Separator('', '', ' ')
-    ph = phonemize(text, separator=seperator)
+    ph = phonemize(text, backend="festival", separator=seperator)
     ph = ph.split(' ')
     ph.remove('')
+
+    print('text %s ~ ph %s' % (text, ph))
 
     result = [char2code[p] for p in ph]
     return torch.LongTensor(result)
